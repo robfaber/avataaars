@@ -26,7 +26,7 @@ export default class Selector extends React.Component<Props> {
     return this.context.optionContext
   }
 
-  componentWillMount () {
+  componentDidMount () {
     const { option, defaultOption } = this.props
     const { optionContext } = this
     const defaultValue = (
@@ -46,7 +46,7 @@ export default class Selector extends React.Component<Props> {
     this.updateOptionValues(nextProps)
   }
 
-  componentWillUnmount () {
+  componentDidUnmount () {
     this.optionContext.removeStateChangeListener(this.optionContextUpdate)
     this.optionContext.optionExit(this.props.option.key)
   }
