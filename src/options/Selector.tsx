@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Option from './Option'
-import OptionContext from './OptionContext'
+import Context, { OptionContext } from './OptionContext'
 
 function getComponentOptionValue (component: React.ComponentClass) {
    const optionValue = (component as any).optionValue
@@ -17,15 +17,20 @@ export interface Props {
 }
 
 const Selector = (props: Props) => {
-  const optionContext = React.useContext(OptionContext)
+  const optionContext = React.useContext<OptionContext>(Context)
+
   const { option, defaultOption, children } = props
 
   function updateOptionValues () {
-    const values = React.Children.map(children,child => getComponentOptionValue((child).type))
+    const values = React.Children.map(children, child => {
+      if (child) {
+        return getComponentOptionValue((child).type)
+      }
+    })
     if (new Set(values).size !== values.length) {
       throw new Error('Duplicate values')
     }
-    this.optionContext.setOptions(option.key, values)
+    optionContext.setOptions(option.key, values)
   }
 
   function optionContextUpdate () {
@@ -61,9 +66,9 @@ const Selector = (props: Props) => {
   }, [props])
 
   let result: React.ReactNode | null = null
-  const value = this.optionContext.getValue(option.key)
+  const value = optionContext.getValue(option.key)
   React.Children.forEach(children, child => {
-    if (getComponentOptionValue((child).type) === value) {
+    if (child && getComponentOptionValue((child).type) === value) {
       result = child
     }
   })

@@ -1,0 +1,16 @@
+import Option from './Option';
+export declare const TopOption: Option;
+export declare const AccessoriesOption: Option;
+export declare const HatColorOption: Option;
+export declare const HairColorOption: Option;
+export declare const FacialHairOption: Option;
+export declare const FacialHairColor: Option;
+export declare const ClotheOption: Option;
+export declare const ClotheColorOption: Option;
+export declare const GraphicOption: Option;
+export declare const EyesOption: Option;
+export declare const EyebrowOption: Option;
+export declare const MouthOption: Option;
+export declare const SkinOption: Option;
+declare const AllOptions: Option[];
+export default AllOptions;

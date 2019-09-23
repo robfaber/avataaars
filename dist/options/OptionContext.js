@@ -12,7 +12,7 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var _1 = require(".");
+var Options_1 = require("./Options");
 var OptionContext = /** @class */ (function () {
     function OptionContext(options) {
         this.stateChangeListeners = new Set();
@@ -57,7 +57,6 @@ var OptionContext = /** @class */ (function () {
     };
     OptionContext.prototype.optionEnter = function (key) {
         var _a;
-        // TODO:
         var optionState = this.getOptionState(key);
         this.setState((_a = {},
             _a[key] = __assign(__assign({}, optionState), { available: optionState.available + 1 }),
@@ -122,5 +121,5 @@ var OptionContext = /** @class */ (function () {
     return OptionContext;
 }());
 exports.OptionContext = OptionContext;
-var Context = React.createContext(new OptionContext(_1.AllOptions));
+var Context = React.createContext(new OptionContext(Options_1.default));
 exports.default = Context;

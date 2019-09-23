@@ -4,7 +4,10 @@
   "description": "React component for avataaars ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "keywords": ["react", "avatar"],
+  "keywords": [
+    "react",
+    "avatar"
+  ],
   "repository": "git@github.com:fangpenlin/avataaars.git",
   "author": "Fang-Pen Lin <hello@fangpenlin.com>",
   "license": "MIT",
@@ -17,6 +20,7 @@
     "tslint": "^5.20.0",
     "tslint-config-standard": "^8.0.1",
     "tslint-react": "^4.1.0",
+    "tslint-react-hooks": "^2.2.1",
     "typescript": "^3.6.3"
   },
   "dependencies": {

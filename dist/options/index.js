@@ -1,77 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Option_1 = require("./Option");
-var Option_2 = require("./Option");
-exports.Option = Option_2.default;
+exports.Option = Option_1.default;
 var OptionContext_1 = require("./OptionContext");
 exports.Context = OptionContext_1.default;
 exports.OptionContext = OptionContext_1.OptionContext;
 var Selector_1 = require("./Selector");
 exports.Selector = Selector_1.default;
-exports.TopOption = new Option_1.default({
-    key: 'topType',
-    label: 'Top'
-});
-exports.AccessoriesOption = new Option_1.default({
-    key: 'accessoriesType',
-    label: '↳ 👓 Accessories'
-});
-exports.HatColorOption = new Option_1.default({
-    key: 'hatColor',
-    label: '🎨 HatColor'
-});
-exports.HairColorOption = new Option_1.default({
-    key: 'hairColor',
-    label: '↳ 💈 Hair Color'
-});
-exports.FacialHairOption = new Option_1.default({
-    key: 'facialHairType',
-    label: 'Facial Hair'
-});
-exports.FacialHairColor = new Option_1.default({
-    key: 'facialHairColor',
-    label: '↳ ✂️ Facial Hair Color'
-});
-exports.ClotheOption = new Option_1.default({
-    key: 'clotheType',
-    label: '👔 Clothes'
-});
-exports.ClotheColorOption = new Option_1.default({
-    key: 'clotheColor',
-    label: '↳ Color Fabric'
-});
-exports.GraphicOption = new Option_1.default({
-    key: 'graphicType',
-    label: '↳ Graphic'
-});
-exports.EyesOption = new Option_1.default({
-    key: 'eyeType',
-    label: '👁 Eyes'
-});
-exports.EyebrowOption = new Option_1.default({
-    key: 'eyebrowType',
-    label: '✏️ Eyebrow'
-});
-exports.MouthOption = new Option_1.default({
-    key: 'mouthType',
-    label: '👄 Mouth'
-});
-exports.SkinOption = new Option_1.default({
-    key: 'skinColor',
-    label: '🎨 Skin'
-});
-exports.AllOptions = [
-    exports.TopOption,
-    exports.AccessoriesOption,
-    exports.HatColorOption,
-    exports.HairColorOption,
-    exports.FacialHairOption,
-    exports.FacialHairColor,
-    exports.ClotheOption,
-    exports.ClotheColorOption,
-    exports.GraphicOption,
-    exports.EyesOption,
-    exports.EyebrowOption,
-    exports.MouthOption,
-    exports.SkinOption
-];
+var Options_1 = require("./Options");
+exports.AllOptions = Options_1.default;
+exports.TopOption = Options_1.TopOption;
+exports.AccessoriesOption = Options_1.AccessoriesOption;
+exports.HatColorOption = Options_1.HatColorOption;
+exports.HairColorOption = Options_1.HairColorOption;
+exports.FacialHairOption = Options_1.FacialHairOption;
+exports.FacialHairColor = Options_1.FacialHairColor;
+exports.ClotheOption = Options_1.ClotheOption;
+exports.ClotheColorOption = Options_1.ClotheColorOption;
+exports.GraphicOption = Options_1.GraphicOption;
+exports.EyesOption = Options_1.EyesOption;
+exports.EyebrowOption = Options_1.EyebrowOption;
+exports.MouthOption = Options_1.MouthOption;
+exports.SkinOption = Options_1.SkinOption;

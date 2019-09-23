@@ -1,7 +1,6 @@
 import * as React from 'react'
-
 import Option from './Option'
-import { AllOptions } from '.'
+import AllOptions from './Options'
 
 export interface OptionState {
   key: string
@@ -55,7 +54,6 @@ export class OptionContext {
   }
 
   optionEnter (key: string) {
-    // TODO:
     const optionState = this.getOptionState(key)!
     this.setState({
       [key]: {
