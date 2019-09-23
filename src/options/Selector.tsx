@@ -64,7 +64,7 @@ export default class Selector extends React.Component<Props> {
   }
 
   private optionContextUpdate = () => {
-    this.forceUpdate()
+    // this.forceUpdate()
   }
 
   private updateOptionValues (
