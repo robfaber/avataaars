@@ -5,7 +5,7 @@ import Option from './Option'
 import OptionContext from './OptionContext'
 
 function getComponentOptionValue (component: React.ComponentClass) {
-  const optionValue = (component as any).optionValue
+   const optionValue = (component as any).optionValue
   if (!optionValue) {
     throw new Error(`optionValue should be provided for ${component}`)
   }
@@ -26,7 +26,7 @@ export default class Selector extends React.Component<Props> {
     return this.context.optionContext
   }
 
-  componentDidMount () {
+  UNSAFE_componentWillMount () {
     const { option, defaultOption } = this.props
     const { optionContext } = this
     const defaultValue = (
@@ -42,11 +42,11 @@ export default class Selector extends React.Component<Props> {
     }
   }
 
-  componentWillUpdate (nextProps: Props & { children?: React.ReactNode }) {
+  UNSAFE_componentWillUpdate (nextProps: Props & { children?: React.ReactNode }) {
     this.updateOptionValues(nextProps)
   }
 
-  componentDidUnmount () {
+  UNSAFE_componentWillUnmount () {
     this.optionContext.removeStateChangeListener(this.optionContextUpdate)
     this.optionContext.optionExit(this.props.option.key)
   }
@@ -64,7 +64,7 @@ export default class Selector extends React.Component<Props> {
   }
 
   private optionContextUpdate = () => {
-    // this.forceUpdate()
+    this.forceUpdate()
   }
 
   private updateOptionValues (

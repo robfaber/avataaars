@@ -39,7 +39,7 @@ var Selector = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Selector.prototype.componentDidMount = function () {
+    Selector.prototype.UNSAFE_componentWillMount = function () {
         var _a = this.props, option = _a.option, defaultOption = _a.defaultOption;
         var optionContext = this.optionContext;
         var defaultValue = (typeof defaultOption === 'string' ?
@@ -52,10 +52,10 @@ var Selector = /** @class */ (function (_super) {
             optionContext.setDefaultValue(option.key, defaultValue);
         }
     };
-    Selector.prototype.componentWillUpdate = function (nextProps) {
+    Selector.prototype.UNSAFE_componentWillUpdate = function (nextProps) {
         this.updateOptionValues(nextProps);
     };
-    Selector.prototype.componentDidUnmount = function () {
+    Selector.prototype.UNSAFE_componentWillUnmount = function () {
         this.optionContext.removeStateChangeListener(this.optionContextUpdate);
         this.optionContext.optionExit(this.props.option.key);
     };

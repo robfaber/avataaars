@@ -4,27 +4,24 @@
   "description": "React component for avataaars ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "keywords": [
-    "react",
-    "avatar"
-  ],
+  "keywords": ["react", "avatar"],
   "repository": "git@github.com:fangpenlin/avataaars.git",
   "author": "Fang-Pen Lin <hello@fangpenlin.com>",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.9.0"
   },
   "devDependencies": {
-    "@types/react": "^16.0.25",
-    "import-sort-style-renke": "^4.2.0",
-    "tslint": "^5.8.0",
-    "tslint-config-standard": "^7.0.0",
-    "tslint-react": "^3.2.0",
-    "typescript": "^2.6.2"
+    "@types/react": "^16.9.2",
+    "import-sort-style-renke": "^6.0.0",
+    "tslint": "^5.20.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-react": "^4.1.0",
+    "typescript": "^3.6.3"
   },
   "dependencies": {
-    "lodash": ">=4.17.11",
-    "prop-types": "^15.6.0"
+    "lodash": ">=4.17.15",
+    "prop-types": "^15.7.2"
   },
   "importSort": {
     ".js, .jsx, .es6, .es": {
