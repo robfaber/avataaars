@@ -4,7 +4,8 @@ var Option_1 = require("./Option");
 var Option_2 = require("./Option");
 exports.Option = Option_2.default;
 var OptionContext_1 = require("./OptionContext");
-exports.OptionContext = OptionContext_1.default;
+exports.Context = OptionContext_1.default;
+exports.OptionContext = OptionContext_1.OptionContext;
 var Selector_1 = require("./Selector");
 exports.Selector = Selector_1.default;
 exports.TopOption = new Option_1.default({
@@ -59,7 +60,7 @@ exports.SkinOption = new Option_1.default({
     key: 'skinColor',
     label: '🎨 Skin'
 });
-exports.allOptions = [
+exports.AllOptions = [
     exports.TopOption,
     exports.AccessoriesOption,
     exports.HatColorOption,

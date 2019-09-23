@@ -1,6 +1,6 @@
 import Option from './Option';
 export { default as Option } from './Option';
-export { default as OptionContext, OptionContextState } from './OptionContext';
+export { default as Context, OptionContext, OptionContextState } from './OptionContext';
 export { default as Selector } from './Selector';
 export declare const TopOption: Option;
 export declare const AccessoriesOption: Option;
@@ -15,4 +15,4 @@ export declare const EyesOption: Option;
 export declare const EyebrowOption: Option;
 export declare const MouthOption: Option;
 export declare const SkinOption: Option;
-export declare const allOptions: Option[];
+export declare const AllOptions: Option[];

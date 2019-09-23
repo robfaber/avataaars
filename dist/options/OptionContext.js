@@ -11,6 +11,8 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var _1 = require(".");
 var OptionContext = /** @class */ (function () {
     function OptionContext(options) {
         this.stateChangeListeners = new Set();
@@ -119,4 +121,6 @@ var OptionContext = /** @class */ (function () {
     };
     return OptionContext;
 }());
-exports.default = OptionContext;
+exports.OptionContext = OptionContext;
+var Context = React.createContext(new OptionContext(_1.AllOptions));
+exports.default = Context;

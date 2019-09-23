@@ -1,4 +1,7 @@
+import * as React from 'react'
+
 import Option from './Option'
+import { AllOptions } from '.'
 
 export interface OptionState {
   key: string
@@ -9,7 +12,7 @@ export interface OptionState {
 
 export type OptionContextState = { [index: string]: OptionState }
 
-export default class OptionContext {
+export class OptionContext {
   private stateChangeListeners = new Set<Function>()
   private valueChangeListeners = new Set<Function>()
   private _state: OptionContextState = {}
@@ -134,3 +137,9 @@ export default class OptionContext {
     }
   }
 }
+
+const Context = React.createContext<OptionContext>(
+  new OptionContext(AllOptions)
+)
+
+export default Context

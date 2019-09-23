@@ -1,7 +1,7 @@
 import Option from './Option'
 
 export { default as Option } from './Option'
-export { default as OptionContext, OptionContextState } from './OptionContext'
+export { default as Context, OptionContext, OptionContextState } from './OptionContext'
 export { default as Selector } from './Selector'
 
 export const TopOption = new Option({
@@ -69,7 +69,7 @@ export const SkinOption = new Option({
   label: '🎨 Skin'
 })
 
-export const allOptions = [
+export const AllOptions = [
   TopOption,
   AccessoriesOption,
   HatColorOption,
