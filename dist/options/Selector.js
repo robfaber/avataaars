@@ -11,6 +11,7 @@ function getComponentOptionValue(component) {
 }
 var Selector = function (props) {
     var optionContext = React.useContext(OptionContext_1.default);
+    var _a = React.useState(false), toggle = _a[0], setToggle = _a[1];
     var option = props.option, defaultOption = props.defaultOption, children = props.children;
     function updateOptionValues() {
         var values = React.Children.map(children, function (child) {
@@ -24,7 +25,7 @@ var Selector = function (props) {
         optionContext.setOptions(option.key, values);
     }
     function optionContextUpdate() {
-        // forceUpdate()
+        setToggle(!toggle);
     }
     React.useEffect(function () {
         function initialize() {
@@ -46,7 +47,7 @@ var Selector = function (props) {
     }, []);
     React.useEffect(function () {
         updateOptionValues();
-    }, [props]);
+    }, [props, toggle]);
     var result = null;
     var value = optionContext.getValue(option.key);
     React.Children.forEach(children, function (child) {

@@ -18,6 +18,7 @@ export interface Props {
 
 const Selector = (props: Props) => {
   const optionContext = React.useContext<OptionContext>(Context)
+  const [toggle, setToggle] = React.useState(false)
 
   const { option, defaultOption, children } = props
 
@@ -34,7 +35,7 @@ const Selector = (props: Props) => {
   }
 
   function optionContextUpdate () {
-    // forceUpdate()
+    setToggle(!toggle)
   }
 
   React.useEffect(() => {
@@ -63,7 +64,7 @@ const Selector = (props: Props) => {
 
   React.useEffect(() => {
     updateOptionValues()
-  }, [props])
+  }, [props, toggle])
 
   let result: React.ReactNode | null = null
   const value = optionContext.getValue(option.key)
