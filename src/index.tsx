@@ -4,7 +4,7 @@ import { OptionContext, Context, AllOptions } from './options'
 import Avatar, { AvatarStyle } from './avatar'
 import { default as PieceComponent } from './avatar/piece'
 
-export { default as Avatar, AvatarStyle } from './avatar'
+export { AvatarStyle } from './avatar'
 export { Option, OptionContext } from './options'
 
 export interface Props {

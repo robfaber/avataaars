@@ -5,7 +5,6 @@ var options_1 = require("./options");
 var avatar_1 = require("./avatar");
 var piece_1 = require("./avatar/piece");
 var avatar_2 = require("./avatar");
-exports.Avatar = avatar_2.default;
 exports.AvatarStyle = avatar_2.AvatarStyle;
 var options_2 = require("./options");
 exports.Option = options_2.Option;

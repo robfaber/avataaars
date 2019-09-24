@@ -1,5 +1,5 @@
 import * as React from 'react';
-export { default as Avatar, AvatarStyle } from './avatar';
+export { AvatarStyle } from './avatar';
 export { Option, OptionContext } from './options';
 export interface Props {
     avatarStyle: string;
